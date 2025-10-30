@@ -14,6 +14,9 @@ Before starting the containers, allow Docker to access your display for GUI apps
 
 ```bash
 xhost +local:root
-
+```
+Then start the environment:
+```bash
+docker compose up
 ```
 
