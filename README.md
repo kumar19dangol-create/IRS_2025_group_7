@@ -82,6 +82,12 @@ The robot will:
 -  Navigate between pick & place waypoints,
 -  Use its arm to pick, carry, and drop objects.
 
+### Shutdown
+1. Press Ctrl + C in each ROS terminal.
+2. In the Docker terminal:
+```bash
+docker compose down
+```
 
 
 
