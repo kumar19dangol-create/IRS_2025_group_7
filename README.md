@@ -19,4 +19,8 @@ Then start the environment:
 ```bash
 docker compose up
 ```
+Two interfaces will open automatically:
 
+-  Warehouse Simulation (Gazebo): the robot’s world view
+-  RViz (MoveIt Arm Interface): arm planning and visualization
+Keep this terminal running.
