@@ -24,3 +24,11 @@ Two interfaces will open automatically:
 -  Warehouse Simulation (Gazebo): the robot’s world view
 -  RViz (MoveIt Arm Interface): arm planning and visualization
 Keep this terminal running.
+
+### Build Your ROS 2 Workspace Locally
+Open a new terminal on your host and build your workspace:
+```bash
+cd ~/irslab_ws
+colcon build
+source install_local/setup.bash   # or source install/setup.bash
+```
