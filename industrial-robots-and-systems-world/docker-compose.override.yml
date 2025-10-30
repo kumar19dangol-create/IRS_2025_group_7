@@ -1,0 +1,32 @@
+services:
+  irs-simulation:
+    gpus: all
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=graphics,compute,utility,video
+      - DISPLAY=${DISPLAY}
+      - QT_QPA_PLATFORM=xcb
+      - QT_X11_NO_MITSHM=1
+      - __GL_YIELD=USLEEP
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    shm_size: "2g"
+    ipc: host
+
+  omron_moma_ros2:
+    gpus: all
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=graphics,compute,utility,video
+      - DISPLAY=${DISPLAY}
+      - QT_QPA_PLATFORM=xcb
+      - QT_X11_NO_MITSHM=1
+      - __GL_YIELD=USLEEP
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    shm_size: "1g"
+    ipc: host
