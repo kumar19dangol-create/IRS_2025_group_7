@@ -32,3 +32,16 @@ cd ~/irslab_ws
 colcon build
 source install_local/setup.bash   # or source install/setup.bash
 ```
+### Set Cyclone DDS (Middleware)
+Run this once in every terminal that launches ROS 2 nodes:
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+```
+### Why?
+ROS 2 uses DDS for node communication.
+The default (Fast-DDS) can cause lag or timeouts with Nav2 + MoveIt.
+CycloneDDS ensures smoother message exchange between:
+-  Nav2 (navigation)
+-  MoveIt action servers (arm)
+-  Nodes outside Docker
+Without this, the arm can become laggy or even crash after a while.
