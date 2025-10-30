@@ -45,3 +45,13 @@ CycloneDDS ensures smoother message exchange between:
 -  MoveIt action servers (arm)
 -  Nodes outside Docker
 Without this, the arm can become laggy or even crash after a while.
+
+### Launch Navigation (Nav2 Stack)
+In the same terminal (after exporting the variable):
+```bash
+ros2 launch hand_solo_virtual_nav nav_launch.py
+```
+This starts:
+-  AMCL (localization)
+-  Map Server + Planner + Controller
+-  Behavior Tree Navigator
