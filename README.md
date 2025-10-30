@@ -7,6 +7,7 @@ Clone the pre-built warehouse Docker setup:
 git clone https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git
 cd industrial-robots-and-systems-world
 
+```
 ### Run the Simulation Container
 
 Before starting the containers, allow Docker to access your display for GUI apps (so RViz and the warehouse simulator can open):
