@@ -55,3 +55,44 @@ This starts:
 -  AMCL (localization)
 -  Map Server + Planner + Controller
 -  Behavior Tree Navigator
+
+### Open the OpenPLC Dashboard
+Open in your browser:
+```bash
+http://localhost:8080/dashboard
+```
+Then: 
+1. Upload your PLC conveyor program .st file(from Conveyor_Data/).
+2. Click Start PLC Runtime.
+Inside the warehouse window:
+-  Press P → open HMI → click Start PLC
+-  Press R → select Autonomous Mode
+The PLC logic will now control the conveyor and sensors.
+
+### Run the Pick-and-Place Node
+Open another new terminal and run:
+```bash
+cd ~/irslab_ws
+colcon build
+source install_local/setup.bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+ros2 run hand_solo_arm hs_pick_place
+```
+The robot will:
+-  Navigate between pick & place waypoints,
+-  Use its arm to pick, carry, and drop objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
